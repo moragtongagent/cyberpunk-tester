@@ -1,0 +1,11 @@
+# Pilot evidence belongs in the private per-user data folder.
+*.mp4
+*.mkv
+*.png
+*.log
+*.dat
+ticket.json
+report.html
+CT-*/
+.env*
+node_modules/
