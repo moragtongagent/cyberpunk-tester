@@ -13,6 +13,10 @@ This repository is public. These instructions apply to every ticket, agent hando
 - For every future release, stage only the reviewed files by name and inspect the staged patch, including newly added files. Before pushing, inspect every outgoing commit, including merge commits, for personal attribution, private addresses, signatures and trailers. Use the established public project identity and a verified no-reply address for both author and committer.
 - Keep release notes and handoffs public-safe too. Describe a test with synthetic identifiers or a general result. Deliver the actual ticket ID, save details, local report and video in the originating private chat.
 
+## Bug reports and project handoffs
+
+For a reported Cyberpunk 2077 mod defect, follow `skills/bug-report-handoff/SKILL.md` from intake through private evidence delivery and a handoff for the affected project. Use the pilot below for Lives of Night City.
+
 ## Lives of Night City pilot
 
 When a new chat reports a Lives of Night City bug, treat the message as a ticket and run the pilot in this checkout. Design discussions alone do not create tickets. Use the commands and JSON formats in README.md. The chat itself provides gameplay decisions. Keep working through case verdicts and private evidence delivery during the active chat.
