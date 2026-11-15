@@ -1,6 +1,8 @@
 # Cyberpunk-Tester
 
-Run a Lives of Night City gameplay ticket from a new chat in this project. Describe what happened, what you expected, and any quest, role, or dialogue choice you remember. An ordinary manual save is sufficient to **attempt** a route. The agent chooses a starting slot and uses observations from the actual game to play forward. Route coverage depends on the save and the agent's ability to navigate the scene.
+Cyberpunk-Tester is a gameplay testing project for Cyberpunk 2077 mods from any author. Lives of Night City is the first supported pilot. Its runner verifies the active deployment and the mod's save marker. Other mods can use the quest-testing method and need their own identity checks for automated verdicts.
+
+For the pilot, describe what happened, what you expected, and any quest, role, or dialogue choice you remember in a new project chat. An ordinary compatible manual save is sufficient to **attempt** a route. The agent chooses a starting slot and uses observations from the actual game to play forward.
 
 ## Windows setup
 

@@ -1,5 +1,9 @@
 # Project instructions
 
+## Project scope
+
+Cyberpunk-Tester is for Cyberpunk 2077 mods from any author. Identify the affected mod, build, deployment and expected behavior from each ticket. Use the quest-reproduction skill for quest issues across mods. Choose save and runtime identity checks appropriate to the target. The implemented ticket runner currently validates Lives of Night City saves and deployments; a different mod needs its own verification before this runner can issue a verdict for it.
+
 ## Privacy and public releases
 
 This repository is public. These instructions apply to every ticket, agent handoff, commit, and GitHub publication.
