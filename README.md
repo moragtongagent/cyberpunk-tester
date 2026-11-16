@@ -55,7 +55,7 @@ Use `node --test` for offline regression checks. Use a real ticket to validate t
 
 The pilot starts the [WkMCP v2.1.0 release](https://github.com/Guikingone/WkMCP/releases/tag/v2.1.0) over MCP stdio. Use the official `wkmcp.mcpb` archive with its published SHA-256, extract it under `%LOCALAPPDATA%\Cyberpunk-Tester\tools\WkMCP-v2.1.0\package`, or set `CPT_WKMCP` to the extracted folder. Copy its `live-bridge/CETBridge` directory into the game's CET mods folder, select `transport = "file"` in the bridge configuration, and cold-start the game. Keep the package, local configuration and captures outside Git.
 
-Run `observe` before and after the trigger. The tester reads the tracked journal objective, the class label from the NCL role system, the player position and named quest facts. It verifies a fresh heartbeat and saves each observation in the case report. Use normal player inputs for travel, dialogue and quest progression.
+Run `observe` before and after the trigger. The tester reads the tracked journal objective, the class label from the NCL role system, the player position and named quest facts. It verifies a fresh heartbeat and saves each observation in the case report. For travel and incidental combat during setup, follow the [quest skill's route guidance](skills/quest-reproduction/SKILL.md#world-travel-and-local-obstacles). Use normal player inputs for the approach, dialogue and quest actions the case exercises.
 
 In raw-input menus, move the game cursor with `look`, then send `{"type":"select"}` to click its current position. Scroll the hovered list with `{"type":"scroll","ticks":-4}`. A negative value scrolls down.
 
