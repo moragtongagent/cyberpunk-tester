@@ -19,7 +19,7 @@ Choose a starting state before the earliest event that could produce the symptom
 - **Quest issues across mods.** Use the [quest reproduction skill](../quest-reproduction/SKILL.md) for prerequisite history, save selection and branch choices. Apply Lives of Night City identity checks and runner commands only to its pilot.
 - **Other mods.** Verify the target using its own deployed files and runtime signals. Check save eligibility when the symptom depends on saved state. Exercise the affected feature through its normal entry point and capture observations privately. The existing runner issues automated mod verdicts only for Lives of Night City.
 
-Carry out the route with the active deployment and preserve manual saves. Capture the state immediately before the trigger, the action taken and the outcome. Inspect the evidence itself. If a step was interrupted, observe the current state before retrying. If recovery stalls, record the last confirmed step and the precise condition needed to continue.
+Carry out the route with the active deployment and preserve manual saves. For world travel, incidental enemies or a local navigation stall, follow the [travel and assistance guidance](../quest-reproduction/SKILL.md#world-travel-and-local-obstacles). Capture the state immediately before the trigger, the action taken and the outcome. Inspect the evidence itself. If a step was interrupted, observe the current state before retrying. If recovery stalls, record the last confirmed step and the precise condition needed to continue.
 
 ## Document the result privately
 
