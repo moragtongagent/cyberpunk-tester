@@ -3,6 +3,8 @@ name: quest-reproduction
 description: Reproduce a Cyberpunk 2077 mod quest issue under the active deployment using mod-specific save verification, faithful prerequisite setup, and private gameplay evidence.
 ---
 
+Default to `gpt-6.2-sol` with the `ultrafast` service tier when launching a session or handing off this skill. Honor explicit model and tier overrides.
+
 Identify the target mod, build and deployment. Compare the active profile and order with the files actually loaded. Use evidence specific to that mod to establish save eligibility. Keep the user's active profile and deployment intact.
 
 For the Lives of Night City pilot, run `profile` and inspect `saves`. Use a slot marked `verified` by the NCL class marker check and confirm the individual save row's tabletop class in the Load Game menu. A group heading can still show a vanilla lifepath. Confirm the expected role or alternate-start state after loading. The current runner's NCL-specific checks apply to this pilot.

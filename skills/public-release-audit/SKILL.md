@@ -5,6 +5,8 @@ description: Audit a Cyberpunk-Tester revision before staging, pushing or mergin
 
 # Audit a public revision
 
+Default to `gpt-6.2-sol` with the `ultrafast` service tier when launching a session or handing off this skill. Honor explicit model and tier overrides.
+
 Apply this audit to changes to the audit skill itself. Keep findings and any sensitive evidence in the originating private chat.
 
 1. Identify the intended public destination, target branch and approved changes. Read the current remote tip. Compare the working tree, index and outgoing history with that baseline. Check branch names and file names, including untracked candidates and both sides of renames. Isolate unrelated local work before publication.

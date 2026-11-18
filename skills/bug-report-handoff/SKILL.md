@@ -5,6 +5,8 @@ description: Investigate a reported Cyberpunk 2077 mod bug, attempt to reproduce
 
 # From bug report to maintainer handoff
 
+Default to `gpt-6.2-sol` with the `ultrafast` service tier when launching a session or handing off this skill. Honor explicit model and tier overrides.
+
 ## Establish the case
 
 Read the supplied report and attachments privately. If the report belongs to an existing ticket, resume its recorded state. Identify the affected mod or candidate projects, the reported game and mod builds, the starting state, the player action, the expected change and the symptom. Record the source of the expectation, such as the report, a quest objective or the affected build's documented behavior. Keep the reporter's account distinguishable from your observations.
