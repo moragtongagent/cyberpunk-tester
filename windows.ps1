@@ -1,6 +1,12 @@
-param([ValidateSet('discover','window','drive','launch','close','open')] [string]$Mode)
+param([ValidateSet('discover','window','drive','launch','close','open','worker-session')] [string]$Mode)
 $ErrorActionPreference = 'Stop'
 $request = [Console]::In.ReadToEnd() | ConvertFrom-Json
+if ($Mode -eq 'worker-session') {
+    if (![Environment]::UserInteractive -or (Get-Process -Id $PID).SessionId -eq 0) {
+        throw 'Start the worker in a logged-in Windows desktop session.'
+    }
+    exit
+}
 if ($Mode -eq 'discover') {
     $keys = @('HKLM:/SOFTWARE/Microsoft/Windows/CurrentVersion/Uninstall/*',
               'HKLM:/SOFTWARE/WOW6432Node/Microsoft/Windows/CurrentVersion/Uninstall/*')

@@ -34,7 +34,7 @@ test('ticket CLI persists intake, plans, blocked outcomes and report outside Git
   t.after(()=>fs.rm(temp,{recursive:true,force:true}));
   const env={...process.env,CPT_PRIVATE:path.join(temp,'private'),CPT_SAVES:path.join(temp,'saves')};
   function cli(args,payload,ok=true) {
-    const p=spawnSync(process.execPath,['pilot.mjs',...args],{
+    const p=spawnSync(process.execPath,['pilot.mjs','--interactive',...args],{
       cwd:project,env,input:payload?JSON.stringify(payload):'',encoding:'utf8'
     });
     if(!ok) {assert.notEqual(p.status,0);return;}

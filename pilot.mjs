@@ -8,12 +8,17 @@ import { actions, gameRoot, nclIdentity, verifyMilestone, judge, kinds, privateF
 import { capture } from './capture.mjs';
 import {baseline,requireBaseline} from './vortex.mjs';
 import {observeGame} from './wkmcp.mjs';
+import {runWorker, workerCommand} from './worker.mjs';
 
-const [cmd,id,arg,extra]=process.argv.slice(2);
-async function input() {
+const args=process.argv.slice(2);
+const interactive=args[0]==='--interactive';
+if(interactive) args.shift();
+const [cmd,id,arg,extra]=args;
+async function stdin() {
   let source=''; for await(const part of process.stdin) source+=part;
-  return JSON.parse(source.replace(/^\uFEFF/,''));
+  return source.replace(/^\uFEFF/,'');
 }
+const input=async()=>JSON.parse(await stdin());
 const print=v=>console.log(JSON.stringify(v,null,2));
 const readJson=async f=>JSON.parse(await fs.readFile(f,'utf8'));
 const key=()=>randomUUID().replaceAll('-','').slice(0,12);
@@ -244,7 +249,17 @@ async function main() {
   }
   print(await exclusive(()=>guarded(cmd,id,arg)));
 }
-main().catch(e=>{
+async function entry() {
+  if(cmd==='worker' && !interactive && args.length===1) {
+    await win('worker-session');
+    await runWorker();
+  } else if(interactive) {
+    await main();
+  } else {
+    await workerCommand(args,stdin);
+  }
+}
+entry().catch(e=>{
   // Host errors may contain private user or install paths. Keep them off chat stdout.
   const hide=s=>String(s).replaceAll(process.env.USERPROFILE||'\0','<user-folder>').replaceAll(process.env.USERNAME||'\0','<user>');
   console.error(hide(e.message)); process.exitCode=1;
