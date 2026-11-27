@@ -16,8 +16,15 @@ Use the [public release audit](skills/public-release-audit/SKILL.md) before stag
 - Before staging files or publishing anything, inspect the exact content and metadata. Check commit author, committer, email, and attribution trailers as well as filenames and diffs. For media, inspect visible and audible content and embedded metadata. If public-safe attribution is needed and none is configured, ask the user which project identity to use.
 - Apply the same checks to branch names, issues, pull requests, release assets, and CI output. Keep sensitive material private if it cannot be verified as safe to publish.
 - Obtain the user's explicit approval before pushing or merging the reviewed revision. Approval to publish code does not authorize disclosure of personal or security-sensitive information.
+- When a revision is ready to merge, notify the user in the originating chat with its proposed diff or pull request link, validation results, and a request for merge approval. Wait for approval of that revision. If the user has already approved that exact revision, acknowledge the approval in the notification and proceed.
 - For every future release, stage only the reviewed files by name and inspect the staged patch, including newly added files. Before pushing, inspect every outgoing commit, including merge commits, for personal attribution, private addresses, signatures and trailers. Use the established public project identity and a verified no-reply address for both author and committer.
 - Keep release notes and handoffs public-safe too. Describe a test with synthetic identifiers or a general result. Deliver the actual ticket ID, save details, local report and video in the originating private chat.
+
+## Improving the testing workflow
+
+Testers may autonomously draft and test revisions to Cyberpunk-Tester's own skills when those revisions improve the testing workflow. This permission includes drafting corresponding project guidance. Keep these changes within the authorized test scope and follow the privacy and evidence requirements above.
+
+Before merging any such revision, present the proposed diff, the reason for the change, and its validation results to the user for review. Present guidance changes as a diff too. Obtain explicit approval for the reviewed revision before pushing or merging; permission to draft and test does not authorize publication.
 
 ## Bug reports and project handoffs
 
